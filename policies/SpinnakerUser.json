@@ -1,0 +1,20 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeAvailabilityZones",
+                "ec2:DescribeRegions"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Action": "sts:AssumeRole",
+            "Resource": ${spinnaker-managed-arns},
+            "Effect": "Allow"
+        }
+    ]
+}
