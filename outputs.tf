@@ -1,9 +1,13 @@
 output "spinnaker-user-access-key-id" {
-  value = var.create_auth_user ? aws_iam_access_key.spinnaker-user[0].id : null
+  value       = var.create_auth_user ? aws_iam_access_key.spinnaker-user[0].id : null
+  description = "AWS Access Key ID for the Spinnaker User"
+  sensitive   = true
 }
 
 output "spinnaker-user-access-key-secret" {
-  value = var.create_auth_user ? aws_iam_access_key.spinnaker-user[0].secret : null
+  value       = var.create_auth_user ? aws_iam_access_key.spinnaker-user[0].secret : null
+  description = "AWS Access Key Secret for the Spinnaker User"
+  sensitive   = true
 }
 
 output "spinnaker-auth-role-arn" {

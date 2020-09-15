@@ -1,13 +1,13 @@
 # AWS Spinnaker Managing Account
 
-This module creates the necessary IAM roles and policies to manage Spinnaker Managed Accounts (Client AWS Accounts).
+This module creates the necessary IAM user & roles and policies to manage Spinnaker Managed Accounts (Client AWS Accounts).
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
-| terraform | ~> 0.12.6 |
+| terraform | ~> 0.12.29 |
 | aws | ~> 2.53 |
 | template | ~> 2.1 |
 
@@ -32,8 +32,8 @@ This module creates the necessary IAM roles and policies to manage Spinnaker Man
 | Name | Description |
 |------|-------------|
 | spinnaker-auth-role-arn | n/a |
-| spinnaker-user-access-key-id | n/a |
-| spinnaker-user-access-key-secret | n/a |
+| spinnaker-user-access-key-id | AWS Access Key ID for the Spinnaker User |
+| spinnaker-user-access-key-secret | AWS Access Key Secret for the Spinnaker User |
 | spinnaker-user-arn | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
